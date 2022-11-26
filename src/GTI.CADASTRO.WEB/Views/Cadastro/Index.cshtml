@@ -17,12 +17,88 @@
                     @Html.LabelFor(m => m.CPF, htmlAttributes: new { @class = "control-label" })
                     @Html.EditorFor(m => m.CPF, new { htmlAttributes = new { @class = "form-control" } })
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-5">
                     @Html.LabelFor(m => m.Nome, htmlAttributes: new { @class = "control-label" })
                     @Html.EditorFor(m => m.Nome, new { htmlAttributes = new { @class = "form-control" } })
                 </div>
             </div>
+            <div class="row">
+                <div class="form-group col-md-2">
+                    @Html.LabelFor(m => m.RG, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.RG, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-2">
+                    @Html.LabelFor(m => m.DataExpedicao, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.DataExpedicao, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-2">
+                    @Html.LabelFor(m => m.OrgaoExpedicao, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.OrgaoExpedicao, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.LabelFor(m => m.UFExpedicao, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.UFExpedicao, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    @Html.LabelFor(m => m.DataNascimento, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.DataNascimento, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-2">
+                    @Html.LabelFor(m => m.Sexo, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.Sexo, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-2">
+                    @Html.LabelFor(m => m.EstadoCivil, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.EstadoCivil, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
         </section>
+        <br />
+        <h2>Endereço</h2>
+        <section id="Endereco">
+            <div class="row">
+                <div class="form-group col-md-1">
+                    @Html.LabelFor(m => m.CEP, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.CEP, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.LabelFor(m => m.Logradouro, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.Logradouro, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.LabelFor(m => m.Numero, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.Numero, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.LabelFor(m => m.Complemento, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.Complemento, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.LabelFor(m => m.Bairro, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.Bairro, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.LabelFor(m => m.Cidade, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.Cidade, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.LabelFor(m => m.UF, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(m => m.UF, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </section>
+        <br />
+        <div class="row">
+            <div class="form-group col-md-2">
+                <input class="btn btn-success" type="submit" value="Cadastrar">
+            </div>
+            <div class="form-group col-md-5">
+                @Html.ActionLink("Lista de Cadastro","Cadastrados","Cadastro", htmlAttributes: new { @class = "btn btn-outline-info" })
+            </div>
+        </div>
     </div>
+
 }
 

@@ -7,6 +7,11 @@ namespace GTI.CADASTRO.WEB.ViewModels
 {
     public class EnderecoViewModel
     {
+        public EnderecoViewModel()
+        {
+
+        }
+
         public decimal EnderecoId { get; set; }
         public string CEP { get; set; }
         public string Logradouro { get; set; }
