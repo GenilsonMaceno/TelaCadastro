@@ -1,4 +1,6 @@
-﻿using GTI.CADASTRO.WEB.Factory.Interface;
+﻿using GTI.CADASTRO.BUSINESSLOGIC.Helpers;
+using GTI.CADASTRO.WEB.Factory.Interface;
+using GTI.CADASTRO.WEB.Services.Interface;
 using GTI.CADASTRO.WEB.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,13 @@ namespace GTI.CADASTRO.WEB.Factory
 {
     public class ClienteFactory : IClienteFactory
     {
+        private readonly IClienteService _clienteService;
+
+        public ClienteFactory(IClienteService clienteService)
+        {
+            _clienteService = clienteService;
+        }
+
         public Task AtualizarCliente(ClienteViewModel viewModel)
         {
             throw new NotImplementedException();
@@ -20,9 +29,17 @@ namespace GTI.CADASTRO.WEB.Factory
             throw new NotImplementedException();
         }
 
-        public Task IncluirCliente(ClienteViewModel viewModel)
+        public async Task IncluirCliente(ClienteViewModel viewModel)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _clienteService.IncluirCliente(viewModel);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

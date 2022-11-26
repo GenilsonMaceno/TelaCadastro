@@ -1,5 +1,7 @@
 using GTI.CADASTRO.WEB.Factory;
 using GTI.CADASTRO.WEB.Factory.Interface;
+using GTI.CADASTRO.WEB.Services;
+using GTI.CADASTRO.WEB.Services.Interface;
 using System;
 
 using Unity;
@@ -45,7 +47,11 @@ namespace GTI.CADASTRO.WEB
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
 
+            //factory
             container.RegisterType<IClienteFactory, ClienteFactory>();
+
+            //service
+            container.RegisterType<IClienteService, ClienteService>();
         }
     }
 }
